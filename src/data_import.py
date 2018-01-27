@@ -24,7 +24,6 @@ train.to_csv("../data/train.csv")
 
 
 # Import the test data
-## There is a 29th blank column for all rows except the first one, so I need to remove it
 test = pd.read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/horse-colic/horse-colic.test", 
                     sep=" ", header=None, names = names[:-1], na_values='?', 
                     usecols=[1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23])
