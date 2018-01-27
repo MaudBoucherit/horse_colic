@@ -1,5 +1,5 @@
 ,train,train,test,test
-,Missing Values,% of Total Values,Missing Values,% of Total Values
+,nb_na,pct_na,nb_na,pct_na
 abdom_protein,198,66.0,37,54.411764705882355
 abdomen,118,39.333333333333336,25,36.76470588235294
 abdominal_dist,56,18.666666666666668,9,13.235294117647058
