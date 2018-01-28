@@ -55,9 +55,9 @@ for i in range(12):
 
 ranks = pd.DataFrame(ranks).rename(columns={0:'abdominal_dist', 1:'age', 2:'capillary_time', 3:'cell_vol', 
                                    4:'extreme_temp', 5:'mucous', 6:'pain', 7:'peristalsis', 8:'protein',
-                                   9:'pulse', 10:'rectal_temp', 11:'respiration'})
+                                   9:'pulse', 10:'rectal_temp', 11:'respiration'}).head(1)
 
-ranks = ranks.rename({0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:7, 7:8, 8:9, 9:10, 10:11, 11:12})
+ranks = ranks.rename({0:'ranks'})
 ranks = ranks.reindex_axis(ranks.columns[[6, 0, 7, 10, 11, 3, 9, 8, 5, 4, 2, 1]], axis=1)
 ranks.to_csv("../results/ranks.csv")
 
