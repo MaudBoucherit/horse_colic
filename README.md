@@ -3,6 +3,9 @@ This project's goal is to predict rather a horse needs surgery, given some of it
 
 Maud Boucherit, Jan 2018
 
+When a horse suffer from colic, veterinarians have to report several symptoms of the horse. The list right now is long: 20 variables, from an estimate of the horse's pain to its rectal temperature, via the colour of its mucous membranes. But are all these features relevant to predict if the horse need surgery? This project is building and fitting a logistic regression on the data, with a random features elimination model. This model should help vets to focus on the most important symptoms.
+
+You can find the final report of this project [here](doc/report.ipynb).
 
 
 ## Getting Started
