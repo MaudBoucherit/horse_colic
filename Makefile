@@ -11,7 +11,7 @@ all: results/model
 
 # Import the data
 data/train.csv: src/data_import.py
-	python src/data_import.py 
+	python src/data_import.py
 
 # Produce some decriptive statistics
 results/EDA: src/EDA.py data/train.csv
