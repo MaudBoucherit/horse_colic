@@ -1,6 +1,5 @@
 import pandas as pd
 from fancyimpute import KNN 
-from sklearn.preprocessing import OneHotEncoder
 import pickle
 
 ## Import the data
@@ -18,6 +17,7 @@ train['age'] = train['age'].replace([1, 9], [0,1])
 train['surgical_lesion'] = train['surgical_lesion'].replace([2, 1], [0,1])
 test['age'] = test['age'].replace([1, 9], [0,1])
 test['surgical_lesion'] = test['surgical_lesion'].replace([2, 1], [0,1])
+train['capillary_time'] = train['capillary_time'].replace([1, 2, 3], [0, 1, 1])
 
 ## Arrange variables
 train = train.reindex_axis(sorted(train.columns), axis=1)
@@ -31,11 +31,6 @@ yvalidate = list(test['surgical_lesion'])
 ## Impute missing values
 X = KNN(k=3).complete(train.iloc[:,:-1])
 Xvalidate = KNN(k=3).complete(test.iloc[:,:-1])
-
-## Create dummies for categorical variables
-onehotencoder = OneHotEncoder(categorical_features = [2,4,5])
-X = onehotencoder.fit_transform(X).toarray()
-Xvalidate = onehotencoder.fit_transform(Xvalidate).toarray()
 
 ## Save as pickle
 data = {'X':X, 'y':y, 'Xvalidate':Xvalidate, 'yvalidate':yvalidate}
