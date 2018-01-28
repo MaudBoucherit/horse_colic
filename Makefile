@@ -7,14 +7,14 @@
 # usage: make all
 
 # run from top to bottom
-all: doc/report.ipynb
+all: results/model
 
 # Import the data
-data: src/data_import.py
-	python src/data_import.py $@
+data/train.csv: src/data_import.py
+	python src/data_import.py 
 
 # Produce some decriptive statistics
-results/EDA: src/EDA.py data
+results/EDA: src/EDA.py data/train.csv
 	python src/EDA.py data/train.csv data/test.csv
 
 # Wrangle the data to use sklearn afterwards
@@ -22,7 +22,7 @@ results/data.pickle: src/data_wrangling.py data results/EDA
 	python src/data_wrangling.py data/train.csv data/test.csv results/na_count.csv
 
 # Build and fit a Logistic Regression
-doc/report.md: src/model_selec.py results/data.pickle
+results/model: src/model_selec.py results/data.pickle
 	python src/model_selec.py results/data.pickle
 
 # clean up intermediate files
