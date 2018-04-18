@@ -12,7 +12,7 @@ Horse Colic
 </h4>
 
 <h4 align="center"><a>
-Created by Maud Boucherit   
+Created by Maud Boucherit   <br>
 January 2018
 </a></h4>
 
