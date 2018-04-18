@@ -5,7 +5,9 @@ Horse Colic
 <br>
 </h1>
 
+<h4 align="center"><a>
 ![](data/jolly-jumper.jpg)
+</a></h4>
 
 <h4 align="center"><a>
 Created by Maud Boucherit   
