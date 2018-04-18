@@ -2,10 +2,10 @@
   <br>
 Horse Colic
 
-![](data/jolly-jumper.jpg)
-
 <br>
 </h1>
+
+![](data/jolly-jumper.jpg)
 
 <h4 align="center"><a>
 Created by Maud Boucherit   
@@ -14,9 +14,9 @@ January 2018
 
 <h4 align="center"><a>
 
-![Python](https://img.shields.io/badge/Version-Python%203-ff0000.svg) 
+![Python](https://img.shields.io/badge/Version-Python%203-006799.svg) 
 [![License](https://img.shields.io/badge/License-MIT-ffd633.svg)](LICENSE.md) 
-[![Reproducible](https://img.shields.io/badge/Reproductibility-Makefile-00b33c.svg)](Makefile)
+[![Reproducible](https://img.shields.io/badge/Reproductibility-Makefile-cc0000.svg)](Makefile)
 
 </a></h4>
 
